@@ -132,6 +132,7 @@ class TushareFetcher(BaseFetcher):
             
             # Get API instance
             self._api = ts.pro_api()
+            self._api._DataApi__http_url = "http://121.40.135.59:8010/"
             
             # Fix: tushare SDK 1.4.x hardcodes api.waditu.com/dataapi which may
             # be unavailable (503). Monkey-patch the query method to use the
